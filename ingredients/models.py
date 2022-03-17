@@ -13,7 +13,7 @@ class Ingredient(models.Model):
     protein = models.FloatField(blank=False)
     salt = models.FloatField(blank=False)
 
-    #TODO: vitamins Ingredient_Vitamin
+    vitamins = models.ManyToManyField('Vitamin')
     #TODO: minerals Ingredient_Mineral
     #TODO: tags Ingredient_Tag
 
