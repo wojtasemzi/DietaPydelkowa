@@ -1,5 +1,6 @@
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
+from django.views.generic import DetailView
 from django.views.generic import ListView
 from django.shortcuts import render
 
@@ -18,3 +19,8 @@ class IngredientAdd(CreateView):
     form_class = forms.IngredientAdd
     template_name = 'add.html'
     success_url = reverse_lazy('ingredients')
+
+
+class Ingredient(DetailView):
+    model = models.Ingredient
+    template_name = 'object.html'
