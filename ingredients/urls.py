@@ -10,4 +10,7 @@ urlpatterns = [
     path('<int:pk>/edit/', views.IngredientEdit.as_view(), name='ingredient_edit'),
     path('<int:pk>/delete/', views.IngredientDelete.as_view(), name='ingredient_delete'),
 
+    path('vitamin/', views.Vitamins.as_view(), name='vitamins'),
+
+
 ]

@@ -39,3 +39,9 @@ class IngredientDelete(DeleteView):
     model = models.Ingredient
     template_name = 'delete.html'
     success_url = reverse_lazy('ingredients')
+
+
+class Vitamins(ListView):
+    model = models.Vitamin
+    context_object_name = 'objects'
+    template_name = 'list.html'
