@@ -107,3 +107,36 @@ class MineralDelete(DeleteView):
     template_name = 'delete.html'
     success_url = reverse_lazy('minerals')
 # endregion
+
+
+# region Tag
+class Tags(ListView):
+    model = models.Tag
+    context_object_name = 'objects'
+    template_name = 'list.html'
+
+
+class TagAdd(CreateView):
+    model = models.Tag
+    form_class = forms.TagAdd
+    template_name = 'add.html'
+    success_url = reverse_lazy('tags')
+
+
+class Tag(DetailView):
+    model = models.Tag
+    template_name = 'object.html'
+
+
+class TagEdit(UpdateView):
+    model = models.Tag
+    fields = '__all__'
+    template_name = 'edit.html'
+    success_url = reverse_lazy('tags')
+
+
+class TagDelete(DeleteView):
+    model = models.Tag
+    template_name = 'delete.html'
+    success_url = reverse_lazy('tags')
+# endregion
