@@ -45,3 +45,10 @@ class Vitamins(ListView):
     model = models.Vitamin
     context_object_name = 'objects'
     template_name = 'list.html'
+
+
+class VitaminAdd(CreateView):
+    model = models.Vitamin
+    form_class = forms.VitaminAdd
+    template_name = 'add.html'
+    success_url = reverse_lazy('vitamins')

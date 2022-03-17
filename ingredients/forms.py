@@ -7,3 +7,9 @@ class IngredientAdd(forms.ModelForm):
     class Meta:
         model = models.Ingredient
         fields = '__all__'
+
+
+class VitaminAdd(forms.ModelForm):
+    class Meta:
+        model = models.Vitamin
+        fields = '__all__'
