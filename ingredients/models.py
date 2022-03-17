@@ -15,7 +15,7 @@ class Ingredient(models.Model):
 
     vitamins = models.ManyToManyField('Vitamin')
     minerals = models.ManyToManyField('Mineral')
-    #TODO: tags Ingredient_Tag
+    tags = models.ManyToManyField('Tag')
 
 
 class Vitamin(models.Model):
