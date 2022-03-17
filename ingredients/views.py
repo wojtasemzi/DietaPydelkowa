@@ -64,3 +64,9 @@ class VitaminEdit(UpdateView):
     fields = '__all__'
     template_name = 'edit.html'
     success_url = reverse_lazy('vitamins')
+
+
+class VitaminDelete(DeleteView):
+    model = models.Vitamin
+    template_name = 'delete.html'
+    success_url = reverse_lazy('vitamins')
