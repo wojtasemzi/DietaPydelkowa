@@ -46,6 +46,11 @@ class Currency(models.Model):
     iso_4217 = models.CharField(max_length=3)
 
 
+class Unit(models.Model):
+    unit = models.CharField(max_length=20)
+    abbreviation = models.CharField(max_length=5)
+
+
 class Store(models.Model):
     store = models.CharField(max_length=50)
     address = models.CharField(max_length=100)
