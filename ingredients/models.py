@@ -1,4 +1,3 @@
-from pyexpat import model
 from django.db import models
 
 class Ingredient(models.Model):
@@ -31,3 +30,12 @@ class Mineral(models.Model):
 class Tag(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(blank=True)
+
+
+class Price(models.Model):
+    ingredient_id = models.ForeignKey(Ingredient)
+    price = models.FloatField()
+    # TODO: currency_id int [ref: > Currency.id]
+    quantity = models.FloatField()
+    # TODO: unit_id int [ref: > Unit.id]
+    # TODO: store_id int [ref: > Store.id]
