@@ -52,3 +52,8 @@ class VitaminAdd(CreateView):
     form_class = forms.VitaminAdd
     template_name = 'add.html'
     success_url = reverse_lazy('vitamins')
+
+
+class Vitamin(DetailView):
+    model = models.Vitamin
+    template_name = 'object.html'

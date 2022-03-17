@@ -13,6 +13,5 @@ urlpatterns = [
     path('vitamin/', views.Vitamins.as_view(), name='vitamins'),
 
     path('vitamin/add/', views.VitaminAdd.as_view(), name='vitamin_add'),
-
-
+    path('vitamin/<int:pk>/', views.Vitamin.as_view(), name='vitamin'),
 ]
