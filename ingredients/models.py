@@ -35,7 +35,7 @@ class Tag(models.Model):
 class Price(models.Model):
     ingredient_id = models.ForeignKey(Ingredient)
     price = models.FloatField()
-    # TODO: currency_id int [ref: > Currency.id]
+    currency_id = models.ForeignKey('Currency')
     quantity = models.FloatField()
     # TODO: unit_id int [ref: > Unit.id]
     # TODO: store_id int [ref: > Store.id]
