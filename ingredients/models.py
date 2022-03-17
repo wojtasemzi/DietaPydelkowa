@@ -26,3 +26,8 @@ class Vitamin(models.Model):
 class Mineral(models.Model):
     name = models.CharField(max_length=50, blank=False)
     description = models.TextField()
+
+
+class Tag(models.Model):
+    name = models.CharField(max_length=50, blank=False)
+    description = models.TextField()
