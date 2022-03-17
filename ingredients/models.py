@@ -1,3 +1,4 @@
+from pyexpat import model
 from django.db import models
 
 class Ingredient(models.Model):
@@ -15,3 +16,8 @@ class Ingredient(models.Model):
     #TODO: vitamins Ingredient_Vitamin
     #TODO: minerals Ingredient_Mineral
     #TODO: tags Ingredient_Tag
+
+
+class Vitamin(models.Model):
+    name = models.CharField(max_length=50, blank=False)
+    description = models.TextField()
