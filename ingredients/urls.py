@@ -10,4 +10,10 @@ urlpatterns = [
     path('<int:pk>/edit/', views.IngredientEdit.as_view(), name='ingredient_edit'),
     path('<int:pk>/delete/', views.IngredientDelete.as_view(), name='ingredient_delete'),
 
+    path('vitamin/', views.Vitamins.as_view(), name='vitamins'),
+
+    path('vitamin/add/', views.VitaminAdd.as_view(), name='vitamin_add'),
+    path('vitamin/<int:pk>/', views.Vitamin.as_view(), name='vitamin'),
+    path('vitamin/<int:pk>/edit/', views.VitaminEdit.as_view(), name='vitamin_edit'),
+    path('vitamin/<int:pk>/delete/', views.VitaminDelete.as_view(), name='vitamin_delete'),
 ]

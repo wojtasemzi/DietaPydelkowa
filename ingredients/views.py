@@ -39,3 +39,34 @@ class IngredientDelete(DeleteView):
     model = models.Ingredient
     template_name = 'delete.html'
     success_url = reverse_lazy('ingredients')
+
+
+class Vitamins(ListView):
+    model = models.Vitamin
+    context_object_name = 'objects'
+    template_name = 'list.html'
+
+
+class VitaminAdd(CreateView):
+    model = models.Vitamin
+    form_class = forms.VitaminAdd
+    template_name = 'add.html'
+    success_url = reverse_lazy('vitamins')
+
+
+class Vitamin(DetailView):
+    model = models.Vitamin
+    template_name = 'object.html'
+
+
+class VitaminEdit(UpdateView):
+    model = models.Vitamin
+    fields = '__all__'
+    template_name = 'edit.html'
+    success_url = reverse_lazy('vitamins')
+
+
+class VitaminDelete(DeleteView):
+    model = models.Vitamin
+    template_name = 'delete.html'
+    success_url = reverse_lazy('vitamins')
