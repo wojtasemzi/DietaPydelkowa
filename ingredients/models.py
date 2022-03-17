@@ -44,3 +44,8 @@ class Price(models.Model):
 class Currency(models.Model):
     currency = models.CharField(max_length=50)
     iso_4217 = models.CharField(max_length=3)
+
+
+class Store(models.Model):
+    store = models.CharField(max_length=50)
+    address = models.CharField(max_length=100)
