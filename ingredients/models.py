@@ -21,3 +21,8 @@ class Ingredient(models.Model):
 class Vitamin(models.Model):
     name = models.CharField(max_length=50, blank=False)
     description = models.TextField()
+
+
+class Mineral(models.Model):
+    name = models.CharField(max_length=50, blank=False)
+    description = models.TextField()
