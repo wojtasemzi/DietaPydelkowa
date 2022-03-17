@@ -39,3 +39,8 @@ class Price(models.Model):
     quantity = models.FloatField()
     # TODO: unit_id int [ref: > Unit.id]
     # TODO: store_id int [ref: > Store.id]
+
+
+class Currency(models.Model):
+    currency = models.CharField(max_length=50)
+    iso_4217 = models.CharField(max_length=3)
