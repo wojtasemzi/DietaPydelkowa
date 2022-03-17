@@ -1,5 +1,6 @@
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
+from django.views.generic import DeleteView
 from django.views.generic import DetailView
 from django.views.generic import ListView
 from django.views.generic import UpdateView
@@ -30,5 +31,11 @@ class Ingredient(DetailView):
 class IngredientEdit(UpdateView):
     model = models.Ingredient
     fields = '__all__'
+    template_name = 'add.html'
+    success_url = reverse_lazy('ingredients')
+
+
+class IngredientDelete(DeleteView):
+    model = models.Ingredient
     template_name = 'add.html'
     success_url = reverse_lazy('ingredients')
