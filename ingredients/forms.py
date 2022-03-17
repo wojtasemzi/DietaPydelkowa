@@ -13,3 +13,9 @@ class VitaminAdd(forms.ModelForm):
     class Meta:
         model = models.Vitamin
         fields = '__all__'
+
+
+class MineralAdd(forms.ModelForm):
+    class Meta:
+        model = models.Mineral
+        fields = '__all__'

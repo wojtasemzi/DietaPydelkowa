@@ -10,6 +10,7 @@ from ingredients import forms
 from ingredients import models
 
 
+# region Ingredient
 class Ingredients(ListView):
     model = models.Ingredient
     context_object_name = 'objects'
@@ -39,8 +40,10 @@ class IngredientDelete(DeleteView):
     model = models.Ingredient
     template_name = 'delete.html'
     success_url = reverse_lazy('ingredients')
+# endregion
 
 
+# region Vitamin
 class Vitamins(ListView):
     model = models.Vitamin
     context_object_name = 'objects'
@@ -70,3 +73,37 @@ class VitaminDelete(DeleteView):
     model = models.Vitamin
     template_name = 'delete.html'
     success_url = reverse_lazy('vitamins')
+# endregion
+
+
+# region Mineral
+class Minerals(ListView):
+    model = models.Mineral
+    context_object_name = 'objects'
+    template_name = 'list.html'
+
+
+class MineralAdd(CreateView):
+    model = models.Mineral
+    form_class = forms.MineralAdd
+    template_name = 'add.html'
+    success_url = reverse_lazy('minerals')
+
+
+class Mineral(DetailView):
+    model = models.Mineral
+    template_name = 'object.html'
+
+
+class MineralEdit(UpdateView):
+    model = models.Mineral
+    fields = '__all__'
+    template_name = 'edit.html'
+    success_url = reverse_lazy('minerals')
+
+
+class MineralDelete(DeleteView):
+    model = models.Mineral
+    template_name = 'delete.html'
+    success_url = reverse_lazy('minerals')
+# endregion
