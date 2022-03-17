@@ -57,3 +57,10 @@ class VitaminAdd(CreateView):
 class Vitamin(DetailView):
     model = models.Vitamin
     template_name = 'object.html'
+
+
+class VitaminEdit(UpdateView):
+    model = models.Vitamin
+    fields = '__all__'
+    template_name = 'edit.html'
+    success_url = reverse_lazy('vitamins')

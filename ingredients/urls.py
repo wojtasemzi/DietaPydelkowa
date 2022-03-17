@@ -14,4 +14,6 @@ urlpatterns = [
 
     path('vitamin/add/', views.VitaminAdd.as_view(), name='vitamin_add'),
     path('vitamin/<int:pk>/', views.Vitamin.as_view(), name='vitamin'),
+    path('vitamin/<int:pk>/edit/', views.VitaminEdit.as_view(), name='vitamin_edit'),
+
 ]
