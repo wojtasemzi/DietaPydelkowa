@@ -37,7 +37,7 @@ class Price(models.Model):
     price = models.FloatField()
     currency_id = models.ForeignKey('Currency')
     quantity = models.FloatField()
-    # TODO: unit_id int [ref: > Unit.id]
+    unit_id = models.ForeignKey('Unit')
     store_id = models.ForeignKey('Store')
 
 
