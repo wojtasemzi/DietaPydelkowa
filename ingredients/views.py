@@ -37,5 +37,5 @@ class IngredientEdit(UpdateView):
 
 class IngredientDelete(DeleteView):
     model = models.Ingredient
-    template_name = 'add.html'
+    template_name = 'delete.html'
     success_url = reverse_lazy('ingredients')
