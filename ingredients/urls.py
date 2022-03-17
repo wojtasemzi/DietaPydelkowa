@@ -19,12 +19,20 @@ urlpatterns = [
     path('vitamin/<int:pk>/edit/', views.VitaminEdit.as_view(), name='vitamin_edit'),
     path('vitamin/<int:pk>/delete/', views.VitaminDelete.as_view(), name='vitamin_delete'),
     # endregion
-    # region Minerals
+    # region Mineral
     path('mineral/', views.Minerals.as_view(), name='minerals'),
 
     path('mineral/add/', views.MineralAdd.as_view(), name='mineral_add'),
     path('mineral/<int:pk>/', views.Mineral.as_view(), name='mineral'),
     path('mineral/<int:pk>/edit/', views.MineralEdit.as_view(), name='mineral_edit'),
     path('mineral/<int:pk>/delete/', views.MineralDelete.as_view(), name='mineral_delete'),
+    # endregion
+    # region Tag
+    path('tag/', views.Tags.as_view(), name='tags'),
+
+    path('tag/add/', views.TagAdd.as_view(), name='tag_add'),
+    path('tag/<int:pk>/', views.Tag.as_view(), name='tag'),
+    path('tag/<int:pk>/edit/', views.TagEdit.as_view(), name='tag_edit'),
+    path('tag/<int:pk>/delete/', views.TagDelete.as_view(), name='tag_delete'),
     # endregion
 ]

@@ -19,3 +19,9 @@ class MineralAdd(forms.ModelForm):
     class Meta:
         model = models.Mineral
         fields = '__all__'
+
+
+class TagAdd(forms.ModelForm):
+    class Meta:
+        model = models.Tag
+        fields = '__all__'
