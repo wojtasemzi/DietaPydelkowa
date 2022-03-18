@@ -43,3 +43,9 @@ class UnitAdd(forms.ModelForm):
     class Meta:
         model = models.Unit
         fields = '__all__'
+
+
+class StoreAdd(forms.ModelForm):
+    class Meta:
+        model = models.Store
+        fields = '__all__'
