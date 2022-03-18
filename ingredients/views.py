@@ -140,3 +140,36 @@ class TagDelete(DeleteView):
     template_name = 'delete.html'
     success_url = reverse_lazy('tags')
 # endregion
+
+
+# region Price
+class Prices(ListView):
+    model = models.Price
+    context_object_name = 'objects'
+    template_name = 'list.html'
+
+
+class PriceAdd(CreateView):
+    model = models.Price
+    form_class = forms.PriceAdd
+    template_name = 'add.html'
+    success_url = reverse_lazy('prices')
+
+
+class Price(DetailView):
+    model = models.Price
+    template_name = 'object.html'
+
+
+class PriceEdit(UpdateView):
+    model = models.Price
+    fields = '__all__'
+    template_name = 'edit.html'
+    success_url = reverse_lazy('prices')
+
+
+class PriceDelete(DeleteView):
+    model = models.Price
+    template_name = 'delete.html'
+    success_url = reverse_lazy('prices')
+# endregion

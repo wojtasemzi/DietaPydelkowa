@@ -25,3 +25,9 @@ class TagAdd(forms.ModelForm):
     class Meta:
         model = models.Tag
         fields = '__all__'
+
+
+class PriceAdd(forms.ModelForm):
+    class Meta:
+        model = models.Tag
+        fields = '__all__'

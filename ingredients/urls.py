@@ -35,4 +35,13 @@ urlpatterns = [
     path('tag/<int:pk>/edit/', views.TagEdit.as_view(), name='tag_edit'),
     path('tag/<int:pk>/delete/', views.TagDelete.as_view(), name='tag_delete'),
     # endregion
+    # region Price
+    path('price/', views.Prices.as_view(), name='prices'),
+
+    path('price/add/', views.PriceAdd.as_view(), name='price_add'),
+    path('price/<int:pk>/', views.Price.as_view(), name='price'),
+    path('price/<int:pk>/edit/', views.PriceEdit.as_view(), name='price_edit'),
+    path('price/<int:pk>/delete/', views.PriceDelete.as_view(), name='price_delete'),
+    # endregion
+
 ]
