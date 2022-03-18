@@ -49,3 +49,4 @@ class StoreAdd(forms.ModelForm):
     class Meta:
         model = models.Store
         fields = '__all__'
+        
