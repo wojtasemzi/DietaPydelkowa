@@ -206,3 +206,36 @@ class CurrencyDelete(DeleteView):
     template_name = 'delete.html'
     success_url = reverse_lazy('currencys')
 # endregion
+
+
+# region Unit
+class Units(ListView):
+    model = models.Unit
+    context_object_name = 'objects'
+    template_name = 'list.html'
+
+
+class UnitAdd(CreateView):
+    model = models.Unit
+    form_class = forms.UnitAdd
+    template_name = 'add.html'
+    success_url = reverse_lazy('units')
+
+
+class Unit(DetailView):
+    model = models.Unit
+    template_name = 'object.html'
+
+
+class UnitEdit(UpdateView):
+    model = models.Unit
+    fields = '__all__'
+    template_name = 'edit.html'
+    success_url = reverse_lazy('units')
+
+
+class UnitDelete(DeleteView):
+    model = models.Unit
+    template_name = 'delete.html'
+    success_url = reverse_lazy('units')
+# endregion

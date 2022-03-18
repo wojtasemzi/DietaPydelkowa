@@ -37,3 +37,9 @@ class CurrencyAdd(forms.ModelForm):
     class Meta:
         model = models.Currency
         fields = '__all__'
+
+
+class UnitAdd(forms.ModelForm):
+    class Meta:
+        model = models.Unit
+        fields = '__all__'
