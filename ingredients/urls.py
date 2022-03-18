@@ -43,5 +43,12 @@ urlpatterns = [
     path('price/<int:pk>/edit/', views.PriceEdit.as_view(), name='price_edit'),
     path('price/<int:pk>/delete/', views.PriceDelete.as_view(), name='price_delete'),
     # endregion
+    # region Currency
+    path('currency/', views.Currencys.as_view(), name='currencys'),
 
+    path('currency/add/', views.CurrencyAdd.as_view(), name='currency_add'),
+    path('currency/<int:pk>/', views.Currency.as_view(), name='currency'),
+    path('currency/<int:pk>/edit/', views.CurrencyEdit.as_view(), name='currency_edit'),
+    path('currency/<int:pk>/delete/', views.CurrencyDelete.as_view(), name='currency_delete'),
+    # endregion
 ]

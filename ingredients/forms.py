@@ -31,3 +31,9 @@ class PriceAdd(forms.ModelForm):
     class Meta:
         model = models.Tag
         fields = '__all__'
+
+
+class CurrencyAdd(forms.ModelForm):
+    class Meta:
+        model = models.Currency
+        fields = '__all__'
