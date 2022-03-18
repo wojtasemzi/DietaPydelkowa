@@ -33,12 +33,12 @@ class Tag(models.Model):
 
 
 class Price(models.Model):
-    ingredient_id = models.ForeignKey(Ingredient)
+    ingredient_id = models.ForeignKey(Ingredient, on_delete=models.CASCADE)
     price = models.FloatField()
-    currency_id = models.ForeignKey('Currency')
+    currency_id = models.ForeignKey('Currency', on_delete=models.RESTRICT)
     quantity = models.FloatField()
-    unit_id = models.ForeignKey('Unit')
-    store_id = models.ForeignKey('Store')
+    unit_id = models.ForeignKey('Unit', on_delete=models.RESTRICT)
+    store_id = models.ForeignKey('Store', on_delete=models.RESTRICT)
 
 
 class Currency(models.Model):
