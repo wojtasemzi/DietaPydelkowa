@@ -1,3 +1,4 @@
+from tkinter import CASCADE
 from django.db import models
 
 class Ingredient(models.Model):
@@ -62,3 +63,10 @@ class Recipe(models.Model):
     recipe = models.TextField()
     #TODO: ingredients = Recipe_Ingredient
     preparation_time = models.IntegerField()
+
+
+class Recipe_Ingredient(models.Model):
+    recipe_id = models.ForeignKey(Recipe, on_delete=CASCADE)
+    ingredient_id = models.ForeignKey(Ingredient, on_delete=CASCADE)
+    quantity = models.FloatField()
+    unit_id = models.ForeignKey(Unit, on_delete=models.RESTRICT)
