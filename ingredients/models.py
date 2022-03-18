@@ -54,3 +54,11 @@ class Unit(models.Model):
 class Store(models.Model):
     store = models.CharField(max_length=50)
     address = models.CharField(max_length=100)
+
+
+class Recipe(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.TextField(blank=True)
+    recipe = models.TextField()
+    #TODO: ingredients = Recipe_Ingredient
+    preparation_time = models.IntegerField()
