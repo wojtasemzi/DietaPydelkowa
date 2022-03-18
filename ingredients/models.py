@@ -62,6 +62,7 @@ class Recipe(models.Model):
     recipe = models.TextField()
     ingredients = models.ManyToManyField(through='Recipe_Ingredient', to=Ingredient)
     preparation_time = models.IntegerField()
+    tags = models.ManyToManyField(Tag, blank=True)
 
 
 class Recipe_Ingredient(models.Model):
