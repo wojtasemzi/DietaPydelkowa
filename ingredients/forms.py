@@ -49,9 +49,4 @@ class StoreAdd(forms.ModelForm):
     class Meta:
         model = models.Store
         fields = '__all__'
-
-
-class RecipeAdd(forms.ModelForm):
-    class Meta:
-        model = models.Recipe
-        fields = '__all__'
+        

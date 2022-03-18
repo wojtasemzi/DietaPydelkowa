@@ -67,12 +67,4 @@ urlpatterns = [
     path('store/<int:pk>/edit/', views.StoreEdit.as_view(), name='store_edit'),
     path('store/<int:pk>/delete/', views.StoreDelete.as_view(), name='store_delete'),
     # endregion
-    # region Recipe
-    path('recipe/', views.Recipes.as_view(), name='recipes'),
-
-    path('recipe/add/', views.RecipeAdd.as_view(), name='recipe_add'),
-    path('recipe/<int:pk>/', views.Recipe.as_view(), name='recipe'),
-    path('recipe/<int:pk>/edit/', views.RecipeEdit.as_view(), name='recipe_edit'),
-    path('recipe/<int:pk>/delete/', views.RecipeDelete.as_view(), name='recipe_delete'),
-    # endregion
 ]

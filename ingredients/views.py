@@ -272,36 +272,3 @@ class StoreDelete(DeleteView):
     template_name = 'delete.html'
     success_url = reverse_lazy('stores')
 # endregion
-
-
-# region Recipe
-class Recipes(ListView):
-    model = models.Recipe
-    context_object_name = 'objects'
-    template_name = 'list.html'
-
-
-class RecipeAdd(CreateView):
-    model = models.Recipe
-    form_class = forms.RecipeAdd
-    template_name = 'add.html'
-    success_url = reverse_lazy('recipes')
-
-
-class Recipe(DetailView):
-    model = models.Recipe
-    template_name = 'object.html'
-
-
-class RecipeEdit(UpdateView):
-    model = models.Recipe
-    fields = '__all__'
-    template_name = 'edit.html'
-    success_url = reverse_lazy('recipes')
-
-
-class RecipeDelete(DeleteView):
-    model = models.Recipe
-    template_name = 'delete.html'
-    success_url = reverse_lazy('recipes')
-# endregion
