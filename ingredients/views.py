@@ -239,3 +239,36 @@ class UnitDelete(DeleteView):
     template_name = 'delete.html'
     success_url = reverse_lazy('units')
 # endregion
+
+
+# region Store
+class Stores(ListView):
+    model = models.Store
+    context_object_name = 'objects'
+    template_name = 'list.html'
+
+
+class StoreAdd(CreateView):
+    model = models.Store
+    form_class = forms.StoreAdd
+    template_name = 'add.html'
+    success_url = reverse_lazy('stores')
+
+
+class Store(DetailView):
+    model = models.Store
+    template_name = 'object.html'
+
+
+class StoreEdit(UpdateView):
+    model = models.Store
+    fields = '__all__'
+    template_name = 'edit.html'
+    success_url = reverse_lazy('stores')
+
+
+class StoreDelete(DeleteView):
+    model = models.Store
+    template_name = 'delete.html'
+    success_url = reverse_lazy('stores')
+# endregion

@@ -59,4 +59,12 @@ urlpatterns = [
     path('unit/<int:pk>/edit/', views.UnitEdit.as_view(), name='unit_edit'),
     path('unit/<int:pk>/delete/', views.UnitDelete.as_view(), name='unit_delete'),
     # endregion
+    # region Store
+    path('store/', views.Stores.as_view(), name='stores'),
+
+    path('store/add/', views.StoreAdd.as_view(), name='store_add'),
+    path('store/<int:pk>/', views.Store.as_view(), name='store'),
+    path('store/<int:pk>/edit/', views.StoreEdit.as_view(), name='store_edit'),
+    path('store/<int:pk>/delete/', views.StoreDelete.as_view(), name='store_delete'),
+    # endregion
 ]
