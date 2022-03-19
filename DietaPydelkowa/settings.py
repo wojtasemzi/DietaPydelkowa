@@ -46,6 +46,7 @@ INSTALLED_APPS = [
 
     'index',
     'ingredients',
+    'prices',
     'recipes',
     'meals',
     'plans',
