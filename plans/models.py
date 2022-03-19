@@ -14,3 +14,8 @@ class Plan_Meal(models.Model):
     meal_id = models.ForeignKey(Meal)
     #TODO: day = models.ForeignKey('Day')
     order = models.IntegerField()
+
+
+class Day(models.Model):
+    name = models.CharField(max_length=15)
+    order = models.IntegerField()
