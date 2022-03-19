@@ -42,5 +42,33 @@ class PlanDelete(DeleteView):
 # endregion
 
 # region Day
+class Days(ListView):
+    model = models.Day
+    context_object_name = 'objects'
+    template_name = 'list.html'
 
+
+class DayAdd(CreateView):
+    model = models.Day
+    form_class = forms.DayAdd
+    template_name = 'add.html'
+    success_url = reverse_lazy('days')
+
+
+class Day(DetailView):
+    model = models.Day
+    template_name = 'object.html'
+
+
+class DayEdit(UpdateView):
+    model = models.Day
+    fields = '__all__'
+    template_name = 'edit.html'
+    success_url = reverse_lazy('days')
+
+
+class DayDelete(DeleteView):
+    model = models.Day
+    template_name = 'delete.html'
+    success_url = reverse_lazy('days')
 # endregion
