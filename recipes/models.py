@@ -2,7 +2,7 @@ from django.db import models
 
 from ingredients.models import Ingredient
 from ingredients.models import Tag
-from ingredients.models import Unit
+from prices.models import Unit
 
 class Recipe(models.Model):
     name = models.CharField(max_length=100)
