@@ -12,7 +12,7 @@ class Plan(models.Model):
 class Plan_Meal(models.Model):
     plan_id = models.ForeignKey(Plan)
     meal_id = models.ForeignKey(Meal)
-    #TODO: day = models.ForeignKey('Day')
+    day = models.ForeignKey('Day')
     order = models.IntegerField()
 
 
