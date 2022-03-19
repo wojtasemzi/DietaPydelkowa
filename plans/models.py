@@ -12,9 +12,9 @@ class Plan(models.Model):
 
 
 class Plan_Meal(models.Model):
-    plan_id = models.ForeignKey(Plan)
-    meal_id = models.ForeignKey(Meal)
-    day = models.ForeignKey('Day')
+    plan_id = models.ForeignKey(Plan, on_delete=models.CASCADE)
+    meal_id = models.ForeignKey(Meal, on_delete=models.CASCADE)
+    day = models.ForeignKey('Day', on_delete=models.RESTRICT)
     order = models.IntegerField()
 
 
