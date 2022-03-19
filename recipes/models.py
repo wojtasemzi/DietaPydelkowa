@@ -8,7 +8,7 @@ class Recipe(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True)
     recipe = models.TextField()
-    ingredients = models.ManyToManyField(through='Recipe_Ingredient', to=Ingredient)
+    ingredients = models.ManyToManyField(Ingredient, through='Recipe_Ingredient')
     preparation_time = models.IntegerField()
     tags = models.ManyToManyField(Tag, blank=True)
 
